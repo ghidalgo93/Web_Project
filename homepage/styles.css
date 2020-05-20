@@ -1,4 +1,9 @@
-.background
+.page-background
 {
-    background-color: mediumseagreen;
+    background-color: grey;
+}
+
+.p-img
+{
+    padding: ($spacer * 2) !important;
 }
