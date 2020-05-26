@@ -1,9 +1,20 @@
-.page-background
+.page-bg
 {
-    background-color: grey;
+    background-color: white;
 }
 
-.p-img
-{
-    padding: ($spacer * 2) !important;
+.navbar-brand{
+    margin-left: 2%;
+}
+
+.intro{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 20%;
+}
+
+.section{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10%;
 }
