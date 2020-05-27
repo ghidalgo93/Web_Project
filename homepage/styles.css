@@ -18,3 +18,15 @@
     flex-flow: column wrap;
     padding: 10%;
 }
+
+.portrait{
+    height: 40%;
+    width: 40%;
+    padding: 3%;
+    border-radius: 50%;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
