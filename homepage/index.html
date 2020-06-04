@@ -8,10 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="functions.js"></script>
     </head>
-    <body class="page-bg">
+    <body class="light-theme">
 
-        <nav class="navbar sticky-top navbar-expand navbar-light page-bg" style="padding-block-start: 1%;">
-            <a class="navbar-brand" href="index.html">GHC</a>
+        <nav class="navbar sticky-top navbar-expand navbar-light" style="padding-block-start: 1%;">
+            <a class="navbar-brand" href="index.html#intro">GHC</a>
+            <button type="button" class="btn btn-dark btn-sm" onclick="darkmode()">Dark Mode</button>
             <div class="navbar-nav ml-auto">
                 <a class="nav-link" href="index.html#about">About</a>
                 <a class="nav-link" href="index.html#experience">Experience</a>
@@ -23,19 +24,9 @@
             </div>
         </nav>
 
-        <div class="dark-mode-parent">
-            <div class="dark-mode-child">
-                <p>Dark Mode</p>
-                <!-- Rounded switch -->
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-        </div>
         
 
-        <div class="intro">
+        <div id="intro" class="intro">
             <p>Hello, my name is</p>
             <h1>Gerardo Hidalgo-Cuellar</h1>
             <br>

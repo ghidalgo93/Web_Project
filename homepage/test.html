@@ -5,16 +5,9 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="teststyles.css" rel="stylesheet">
         <title>Test</title>
+        <script src="testFunctions.js"></script>
     </head>
-    <body>
-        
-      <button id="dark-mode">Dark Mode</button>
-
-      <script>
-        document.querySelector('#dark-mode').onclick = function() {
-           document.querySelector('.theme').style.backgroundColor = "grey"
-        }
-      </script>
-
+    <body class="theme">       
+      <button onclick="darkmode()">Dark Mode</button>
     </body>
 </html>
