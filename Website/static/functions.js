@@ -14,5 +14,4 @@ function darkmode() {
         nav.className = "navbar sticky-top navbar-expand navbar-light"
         button.innerHTML = "Dark Mode"
     }
-    
-  }
+}
