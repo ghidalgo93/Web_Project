@@ -9,7 +9,4 @@ def index():
 @app.route("/blog")
 def blog():
     return render_template("blog.html")
-
-@app.route("/resume")
-def resume():
-    return render_template("resume.html")
+    

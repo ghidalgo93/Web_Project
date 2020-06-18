@@ -1,2 +1,4 @@
 # Web_Project
-CS50 web project track
+
+Gerardo Hidalgo-Cuellar's personal website, v1.
+5/18/2020
