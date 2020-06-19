@@ -9,10 +9,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- static JS & CSS files -->
-        <script type=text/javascript src="{{url_for('static', filename='functions.js') }}"></script>
+        <script type="text/javascript" src="{{url_for('static', filename='functions.js') }}"></script>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">       
     </head>
     <body class="light-theme">
+        <!-- topnav -->
         <nav class="navbar sticky-top navbar-expand navbar-light" style="padding: 1%">
             <a class="navbar-brand" href="/">GHC</a>
             <button type="button" class="btn btn-dark btn-sm" onclick="darkmode()">Dark Mode</button>
@@ -21,10 +24,25 @@
                 <a class="nav-link" href="#experience">Experience</a>
                 <a class="nav-link" href="#projects">Projects</a>
                 <a class="nav-link" href="#contact">Contact</a>
-                <a class="nav-link" href="/blog">Blog</a>
                 <a href="{{url_for('static', filename='media/hidalgo_resume_2020.pdf') }}" target="_blank" class="btn btn-dark" role="button">Resume</a>
             </div>
         </nav>
+        <!-- side nav -->
+        <nav class="nav fixed-bottom flex-column" style="padding-bottom: 5%;">
+            <a class="nav-link" href="https://github.com/ghidalgo93" target="_blank">
+                <img id="github-logo" src="{{url_for('static', filename='media/github.svg') }}" style="width:20px;height:20px;" alt="Github Logo">
+            </a>
+            <a class="nav-link" href="https://www.linkedin.com/in/gerardo-hidalgo-cuellar/" target="_blank">
+                <img id="linkedin-logo" src="{{url_for('static', filename='media/linkedin.svg') }}" style="width:20px;height:20px;" alt="LinkedIn Logo">
+            </a>
+            <a class="nav-link" href="https://www.instagram.com/g.luis.hidalgo/" target="_blank">
+                <img id="instagram-logo" src="{{url_for('static', filename='media/instagram.svg') }}" style="width:20px;height:20px;" alt="Instagram Logo">
+            </a>
+            <a class="nav-link" href="https://twitter.com/Gerardo_H_C" target="_blank">
+                <img id="twitter-logo" src="{{url_for('static', filename='media/twitter.svg') }}" style="width:20px;height:20px;" alt="Twitter Logo">
+            </a>
+        </nav>
+        <!-- intro -->
         <div class="intro">
             <p>Hello, my name is</p>
             <h1 style="font-size: 400%; font-weight: bold;">Gerardo Hidalgo-Cuellar</h1>
@@ -36,6 +54,7 @@
                 degree in Astrophysical and Planetary Sciences.
             </p>
         </div>
+        <!-- about -->
         <div id="about" class="section">
             <div class="media">
                 <div class="media-body" style="width: min-content;">
@@ -74,21 +93,20 @@
                 <img class="portrait" src="{{url_for('static', filename='media/hidalgo_port.jpg') }}" alt="Geraro Hidalgo Potrait">
               </div>
         </div>
+        <!-- work xp -->
         <div id="experience" class="section">
             <h2>Work Experience</h2>
-
             <div class="row">
                 <div class="col-3">
-                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab-work" role="tablist" aria-orientation="vertical">
                         <a class="nav-link active text-dark" id="v-pills-lasp-tab" data-toggle="pill" href="#v-pills-lasp" role="tab" aria-controls="v-pills-lasp" aria-selected="true">Laboratory for Atmospheric and Space Physics (LASP)</a>
                         <a class="nav-link text-dark" id="v-pills-CU-tab" data-toggle="pill" href="#v-pills-CU" role="tab" aria-controls="v-pills-CU" aria-selected="false">University of Colorado, Boulder</a>
                         <a class="nav-link text-dark" id="v-pills-fiske-tab" data-toggle="pill" href="#v-pills-fiske" role="tab" aria-controls="v-pills-fiske" aria-selected="false">Fiske Planetarium</a>
                         <a class="nav-link text-dark" id="v-pills-astrocamp-tab" data-toggle="pill" href="#v-pills-astrocamp" role="tab" aria-controls="v-pills-astrocamp" aria-selected="false">Astrocamp, Guided Discoveries</a>
                     </div>
                 </div>
-                
                 <div class="col-9">
-                    <div class="tab-content" id="v-pills-tabContent" style="width: 55%;">
+                    <div class="tab-content" id="v-pills-tab-workContent" style="width: 55%;">
                         <div class="tab-pane fade show active" id="v-pills-lasp" role="tabpanel" aria-labelledby="v-pills-lasp-tab">
                             <h5>Software Engineer, Intern at 
                                 <a href="https://lasp.colorado.edu/home/" target="_blank">LASP</a>
@@ -147,13 +165,54 @@
                 </div>
             </div>
         </div>
-
+        <!-- projects -->
         <div id="projects" class="section">
             <h2>Projects</h2>
-            <h5>IoT</h5>
-            <h5>RPi Media Server</h5>
+            <div class="row">
+                <div class="col-3">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab-projects" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active text-dark" id="v-pills-traffic-tab" data-toggle="pill" href="#v-pills-traffic" role="tab" aria-controls="v-pills-traffic" aria-selected="true">Data Analysis of Traffic Violations</a>
+                        <a class="nav-link text-dark" id="v-pills-website-tab" data-toggle="pill" href="#v-pills-website" role="tab" aria-controls="v-pills-website" aria-selected="false">Personal Website (V1)</a>
+                        <a class="nav-link text-dark" id="v-pills-iot-tab" data-toggle="pill" href="#v-pills-iot" role="tab" aria-controls="v-pills-iot" aria-selected="false">Home Control (IoT)</a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="tab-content" id="v-pills-tab-projectsContent" style="width: 55%;">
+                        <div class="tab-pane fade show active" id="v-pills-traffic" role="tabpanel" aria-labelledby="v-pills-traffic-tab">
+                            <h5>Traffic Violations Analysis in Montgomery County, MD
+                                <a href="#" target="_blank">#doto, github link</a>
+                            </h5>
+                            <ul>
+                                <li>Data analysis of some traffic violations in Montgomery County, MD. Traffic violations looked at included speed exceeded
+                                    on differing types of roads (highways vs. non-highway roads), time of day, day of the month, and the frequency stopped over
+                                    the mean speed exceeded (9mph). Traffic stops were mapped via GPS coordiates to look at density differences.
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-website" role="tabpanel" aria-labelledby="v-pills-website-tab">
+                            <h5>Personal Website (V1)
+                                <a href="#" target="_blank">#doto, github link</a>
+                            </h5>
+                            <ul>
+                                <li>My personal website built with bootstrap and hosted on #TODO.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-iot" role="tabpanel" aria-labelledby="v-pills-iot-tab">
+                            <h5>Home Control, an project looking at IoT
+                                <a href="#" target="_blank">#doto, github link</a>
+                            </h5>
+                            <ul>
+                                <li>Using a raspberry pi, working on several projects to make a smarter home via Internet of Things. A constant work in progress, 
+                                    but stated with LED controls and expanding to weather & light sensors using an arduino, and a personal climbing wall setup. 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        <!-- contact -->
         <div id="contact" class="section">
             <h2>Contact</h2>
             <p style="width: 40%;">
@@ -165,9 +224,7 @@
             </p>
             <a href="mailto:ghidalgo93@gmail.com" style="width: min-content;" class="btn btn-dark btn-lg" role="button">Contact me here</a>
         </div>
-
-          
-
+        <!-- footer -->
         <footer class="footer">
             <p style="font-size: small">
                 Designed & Built by Gerardo Hidalgo-Cuellar

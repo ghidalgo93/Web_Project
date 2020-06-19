@@ -2,20 +2,28 @@ function darkmode() {
     var body = document.querySelector('body')
     var button = document.querySelector('button')
     var nav = document.querySelector('nav')
-    var foo = document.getElementsByClassName('card')
+    var github = document.getElementById('github-logo')
+    var linkedin = document.getElementById('linkedin-logo')
+    var instagram = document.getElementById('instagram-logo')
+    var twitter = document.getElementById('twitter-logo')
 
 
     if (body.className === "light-theme") {
-        foo.className = "card bg-dark text-white"
         body.className = "dark-theme"
         nav.className = "navbar sticky-top navbar-expand navbar-dark"
         button.innerHTML = "Light Mode"
-        
+        github.src = "static/media/github-dark.svg"
+        linkedin.src = "static/media/linkedin-dark.svg"
+        instagram.src = "static/media/instagram-dark.svg"
+        twitter.src = "static/media/twitter-dark.svg"
     }
     else {
         body.className = "light-theme"
         nav.className = "navbar sticky-top navbar-expand navbar-light"
         button.innerHTML = "Dark Mode"
-        foo.className = "card bg-light"
+        github.src = "/static/media/github.svg"
+        linkedin.src = "static/media/linkedin.svg"
+        instagram.src = "static/media/instagram.svg"
+        twitter.src = "static/media/twitter.svg"
     }
 }
