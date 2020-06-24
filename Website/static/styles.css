@@ -49,3 +49,9 @@
     width:5px;
     height:20px;
 }
+
+.project_img{
+    height: 80%;
+    width: 80%;
+    padding: 3%;
+}

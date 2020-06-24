@@ -12,23 +12,27 @@
         <script type="text/javascript" src="{{url_for('static', filename='functions.js') }}"></script>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
         <!-- Add icon library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- favicon-->
+        <link rel="icon" href="../static/media/gh.png">
     </head>
     <body class="light-theme">
         <!-- topnav -->
         <nav class="navbar sticky-top navbar-expand navbar-light" style="padding: 1%">
-            <a class="navbar-brand" href="/">GHC</a>
+            <a class="navbar-brand" href="/" style="padding-right: 2%;">
+                <img id="gh-logo" src="{{url_for('static', filename='media/gh.png') }}" style="width:40px;height:40px;" alt="GH Logo">
+            </a>
             <button type="button" class="btn btn-dark btn-sm" onclick="darkmode()">Dark Mode</button>
             <div class="navbar-nav ml-auto">
                 <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#experience">Experience</a>
                 <a class="nav-link" href="#projects">Projects</a>
                 <a class="nav-link" href="#contact">Contact</a>
-                <a href="{{url_for('static', filename='media/hidalgo_resume_2020.pdf') }}" target="_blank" class="btn btn-dark" role="button">Resume</a>
+                <a href="{{url_for('static', filename='media/resume.pdf') }}" target="_blank" class="btn btn-dark" role="button">Resume</a>
             </div>
         </nav>
         <!-- side nav -->
-        <nav class="nav fixed-bottom flex-column" style="padding-bottom: 5%;">
+        <nav class="nav fixed-bottom flex-column" style="padding-bottom: 1%; width: 2%;">
             <a class="nav-link" href="https://github.com/ghidalgo93" target="_blank">
                 <img id="github-logo" src="{{url_for('static', filename='media/github.svg') }}" style="width:20px;height:20px;" alt="Github Logo">
             </a>
@@ -49,7 +53,7 @@
             <br>
             <p>
                 I am a software developer, data analyst, and web creator living
-                and working out of beautiful Boulder, CO. A graduate of the 
+                and working out of beautiful Boulder, CO. I am a graduate of the 
                 University of Colorado, Boulder where I recieved a Bachelor's 
                 degree in Astrophysical and Planetary Sciences.
             </p>
@@ -61,7 +65,7 @@
                   <h2 class="mt-0">About me</h2>
                   <br>
                   <p>
-                    My name is Gerardo Hidalgo-Cuellar, a young professional based in Boulder, CO.
+                    My name is Gerardo Hidalgo-Cuellar, a software and outdoor enthusiast based in Boulder, CO.
                   </p>
                   <p>
                     I enjoy developing software and applications for data analysis, IoT,
@@ -78,7 +82,7 @@
                     I am an outdoor enthusiast, most of my days start or end with some time climbing or bouldering
                     close to home in Boulder or Eldrodo Canyon, or trail runs in the foothills. 
                   </p>
-                  <p>Some technologies I have been working with:</p>
+                  <p>Here are some technologies I have been working with recently:</p>
                   <ul>
                       <li>C</li>
                       <li>Python</li>
@@ -179,8 +183,9 @@
                 <div class="col-9">
                     <div class="tab-content" id="v-pills-tab-projectsContent" style="width: 55%;">
                         <div class="tab-pane fade show active" id="v-pills-traffic" role="tabpanel" aria-labelledby="v-pills-traffic-tab">
-                            <h5>Traffic Violations Analysis in Montgomery County, MD
-                                <a href="#" target="_blank">#doto, github link</a>
+                            <h5>
+                                <a href="https://github.com/ghidalgo93/traffic_data" target="_blank">Traffic Violations Analysis</a>
+                                in Montgomery County, MD
                             </h5>
                             <ul>
                                 <li>Data analysis of some traffic violations in Montgomery County, MD. Traffic violations looked at included speed exceeded
@@ -189,18 +194,21 @@
                                 </li>
                                 
                             </ul>
+                            <img src="{{url_for('static', filename='media/traffic_map.png') }}" class="project_img" alt="Traffic Violations GPS data.">
                         </div>
                         <div class="tab-pane fade" id="v-pills-website" role="tabpanel" aria-labelledby="v-pills-website-tab">
-                            <h5>Personal Website (V1)
-                                <a href="#" target="_blank">#doto, github link</a>
+                            <h5>
+                                <a href="https://github.com/ghidalgo93/Web_Project" target="_blank">Personal Website</a>
+                                (V1)
                             </h5>
                             <ul>
                                 <li>My personal website built with bootstrap and hosted on #TODO.</li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="v-pills-iot" role="tabpanel" aria-labelledby="v-pills-iot-tab">
-                            <h5>Home Control, an project looking at IoT
-                                <a href="#" target="_blank">#doto, github link</a>
+                            <h5>
+                                <a href="https://github.com/ghidalgo93/HomeControl" target="_blank">Home Control,</a>
+                                an project looking at IoT
                             </h5>
                             <ul>
                                 <li>Using a raspberry pi, working on several projects to make a smarter home via Internet of Things. A constant work in progress, 
